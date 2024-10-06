@@ -1,0 +1,56 @@
+@import '../../styles/varibles.scss';
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 16px 40px;
+  background-color: rgb(247, 247, 247);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.wrap {
+  max-width: $container-width;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+.navItem {
+  position: relative;
+  display: flex;
+  padding: 20px 20px 20px 0;
+  align-items: center;
+  color: rgb(115, 114, 114);
+  transition: color 0.3s ease;
+
+  .active {
+    color: rgb(0, 0, 0);
+  }
+
+  &:hover {
+    color: black;
+  }
+}

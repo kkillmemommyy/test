@@ -1,0 +1,13 @@
+@import '../../styles/varibles.scss';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.container {
+  max-width: $container-width;
+  width: 100%;
+}

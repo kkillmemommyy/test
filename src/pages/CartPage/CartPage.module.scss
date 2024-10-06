@@ -1,0 +1,48 @@
+@import '../../styles/varibles.scss';
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  padding: 0 40px;
+}
+
+.container {
+  max-width: $container-width;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+.content {
+  background-color: rgb(247, 247, 247);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: gray;
+  font-size: 20px;
+}
+
+.total {
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.price {
+  color: rgb(46, 103, 49);
+}
+
+.produtsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
