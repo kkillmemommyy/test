@@ -1,6 +1,6 @@
-import cls from './CartCard.module.scss';
-import { useAppSelector, useAppDispatch } from '../../services';
-import { increaseProductCount, decreaseProductCount } from '../../services/slices/cartSlice/cartSlice';
+import cls from './ProductCard.module.scss';
+import { useTypedSelector, useTypedDispatch } from '../../../../hooks/useTypedRedux';
+import { increaseProductCount, decreaseProductCount } from '../../../../services/slices/cartSlice';
 
 import { memo } from 'react';
 
@@ -8,10 +8,10 @@ interface IProps {
   id: number;
 }
 
-export const CartCard = memo(({ id }: IProps) => {
-  const dispatch = useAppDispatch();
+export const ProductCard = memo(({ id }: IProps) => {
+  const dispatch = useTypedDispatch();
 
-  const product = useAppSelector((state) => state.cart.entities[id]);
+  const product = useTypedSelector((state) => state.cart.entities[id]);
   const { thumbnail, title, count, price } = product;
 
   const incrementHandle = () => {

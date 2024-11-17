@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../services/';
+import { useTypedSelector, useTypedDispatch } from '../../hooks/useTypedRedux';
 
 import clsx from 'clsx';
 import cls from './MainPage.module.scss';
 
-import { fetchProducts } from '../../services/slices/productsSlice/productsSlice';
+import { fetchProducts } from '../../services/slices/productsSlice';
 
 import { usePagination } from '../../hooks/usePagination';
 import { useScrollToTop } from '../../hooks/useScrollTop';
@@ -13,13 +13,13 @@ import { ProductCard } from '../../components/ProductCard/ProductCard';
 
 import { getSkip } from '../../utils/getSkip';
 
-export const MainPage = () => {
+const MainPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   useScrollToTop(currentPage);
-  const dispatch = useAppDispatch();
+  const dispatch = useTypedDispatch();
 
-  const { entities: products, total, limit } = useAppSelector((state) => state.products);
+  const { entities: products, total, limit } = useTypedSelector((state) => state.products);
 
   const pages = usePagination(total, limit);
 
@@ -46,3 +46,5 @@ export const MainPage = () => {
     </div>
   );
 };
+
+export default MainPage;

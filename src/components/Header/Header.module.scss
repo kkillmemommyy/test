@@ -12,17 +12,18 @@
   text-align: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.wrap {
+.container {
   max-width: $container-width;
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.logo {
+  padding: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .nav {
@@ -41,7 +42,7 @@
 .navItem {
   position: relative;
   display: flex;
-  padding: 20px 20px 20px 0;
+  padding: 20px;
   align-items: center;
   color: rgb(115, 114, 114);
   transition: color 0.3s ease;

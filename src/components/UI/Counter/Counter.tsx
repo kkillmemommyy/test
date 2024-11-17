@@ -1,8 +1,8 @@
-import { useAppSelector } from '../../../services';
+import { useTypedSelector } from '../../../hooks/useTypedRedux';
 import cls from './Counter.module.scss';
 
 export const Counter = () => {
-  const totalCount = useAppSelector((state) => state.cart.totalCount);
+  const totalCount = useTypedSelector((state) => state.cart.totalCount);
 
   if (totalCount === 0) {
     return;

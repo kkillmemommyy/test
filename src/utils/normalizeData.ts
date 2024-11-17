@@ -1,4 +1,4 @@
-import { IApiData, TProduct } from "../services/slices/productsSlice/types";
+import { IApiData, TProduct } from '../services/slices/productsSlice/types';
 
 export const normalizeData = (data: IApiData[]): TProduct[] => {
   return data.map((item) => ({

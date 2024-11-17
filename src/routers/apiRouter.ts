@@ -1,5 +1,9 @@
-const BASE_URL = "https://dummyjson.com";
+const BASE_URL = 'https://dummyjson.com';
 
-export const apiRoutes = {
+type TApiRoutes = {
+  products: () => string;
+};
+
+export const apiRoutes: TApiRoutes = {
   products: () => `${BASE_URL}/products`,
 };

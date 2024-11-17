@@ -1,0 +1,30 @@
+.title {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.subtitle {
+  color: gray;
+  font-size: 20px;
+}
+
+.produtsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.total {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.price {
+  color: rgb(46, 103, 49);
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

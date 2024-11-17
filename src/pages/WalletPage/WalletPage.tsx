@@ -1,6 +1,6 @@
 import cls from './WalletPage.module.scss';
 
-export const WalletPage = () => {
+const WalletPage = () => {
   return (
     <div className={cls.wrap}>
       <div className={cls.container}>
@@ -9,3 +9,5 @@ export const WalletPage = () => {
     </div>
   );
 };
+
+export default WalletPage;

@@ -1,22 +1,22 @@
 import cls from './ProductCard.module.scss';
 import { memo } from 'react';
 
-import { useAppDispatch } from '../../services';
-import { addToCart } from '../../services/slices/cartSlice/cartSlice'
+import { useTypedDispatch } from '../../hooks/useTypedRedux';
+import { addToCart } from '../../services/slices/cartSlice';
 
 interface TProps {
-  id: number
+  id: number;
   thumbnail: string;
   title: string;
   price: number;
 }
 
 export const ProductCard = memo(({ thumbnail, title, price, id }: TProps) => {
-  const dispatch = useAppDispatch();
+  const dispatch = useTypedDispatch();
 
   const addToCartHandle = () => {
-    dispatch(addToCart({thumbnail, title, price, id}));
-  }
+    dispatch(addToCart({ thumbnail, title, price, id }));
+  };
 
   return (
     <div className={cls.card}>
